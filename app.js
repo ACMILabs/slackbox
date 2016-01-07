@@ -72,8 +72,10 @@ app.post('/store', function(req, res) {
           var track = results[0];
           spotifyApi.addTracksToPlaylist(process.env.SPOTIFY_USERNAME, process.env.SPOTIFY_PLAYLIST_ID, ['spotify:track:' + track.id])
             .then(function(data) {
+              var text = 'Track added: *' + track.name + '* by *' + track.artists[0].name + '*';
+              if (process.env.SPOTIFY_PERMALINK) text += ' (listen at: ' + process.env.SPOTIFY_PERMALINK + ' )';
               return res.json( {'response_type': 'in_channel',
-                'text': 'Track added: *' + track.name + '* by *' + track.artists[0].name + '*'
+                'text': text
                 });
               //return res.send('Track added: *' + track.name + '* by *' + track.artists[0].name + '*');
             }, function(err) {

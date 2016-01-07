@@ -77,7 +77,6 @@ app.post('/store', function(req, res) {
               return res.json( {'response_type': 'in_channel',
                 'text': text
                 });
-              //return res.send('Track added: *' + track.name + '* by *' + track.artists[0].name + '*');
             }, function(err) {
               return res.send(err.message);
             });

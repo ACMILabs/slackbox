@@ -7,6 +7,13 @@ Simply create a Slash Command, such as `/jukebox`, which accepts a track name (a
 
     /jukebox Bell Biv DeVoe – Poison
 
+## ACMI Additions
+
+This is a fork of the excellent project by [Benchmark](http://benchmark.co.uk). Our two tiny additions:
+
+* The response sent back to Slack is in JSON format, using `response_type` : `in_channel` for when a track is successfully added to the Spotify playlist.
+* The response sent to Slack is appended with a permalink URI of the playlist so you can direct users there to list to your tracks. This is stored in the `SPOTIFY_PERMALINK` environment variable.
+
 ##Installation
 
 First you'll want to create your Slack Slash Command, which you can do by going to your [Slash Commands page](https://my.slack.com/services/new/slash-commands).
@@ -33,6 +40,7 @@ Once you've cloned slackbox or hit the "Deploy with Heroku" button you'll need t
 * `SPOTIFY_USERNAME` - Your Spotify username.
 * `SPOTIFY_PLAYLIST_ID` - Your playlist identifier.
 * `SPOTIFY_REDIRECT_URI` - URI to redirect to once your user has allowed the application's permissions.
+* `SPOTIFY_PERMALINK` - URI to show on Slack for users to find the playlist on Spotify.
 
 ###Authentication
 

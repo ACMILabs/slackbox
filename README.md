@@ -40,10 +40,7 @@ Once you've cloned slackbox or hit the "Deploy with Heroku" button you'll need t
 * `SPOTIFY_USERNAME` - Your Spotify username.
 * `SPOTIFY_PLAYLIST_ID` - Your playlist identifier.
 * `SPOTIFY_REDIRECT_URI` - URI to redirect to once your user has allowed the application's permissions.
-<<<<<<< HEAD
 * `SPOTIFY_PERMALINK` - URI to show on Slack for users to find the playlist on Spotify.
-=======
->>>>>>> eb688695cbbc74183077999891d5ed496eefcd0d
 
 ###Authentication
 

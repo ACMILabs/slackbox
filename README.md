@@ -11,7 +11,7 @@ Simply create a Slash Command, such as `/jukebox`, which accepts a track name (a
 
 This is a fork of the excellent project by [Benchmark](http://benchmark.co.uk). Our two tiny additions:
 
-* The response sent back to Slack is in JSON format, using `response_type` : `in_channel` for when a track is successfully added to the Spotify playlist.
+* The response sent back to Slack is in JSON format, using `response_type` : `in_channel` for when a track is successfully added to the Spotify playlist. (This makes playlist additions public)
 * The response sent to Slack is appended with a permalink URI of the playlist so you can direct users there to list to your tracks. This is stored in the `SPOTIFY_PERMALINK` environment variable.
 
 ##Installation
